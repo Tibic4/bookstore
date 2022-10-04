@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Books = ({ books }) => {
+function Books(props) {
   return (
     <div>
-      {books.map((book, index) => (
-        <div key={index}>
-          <h3>{book.title}</h3>
-          <p>{book.author}</p>
+      <h1> Books </h1>
+      {props.books.map((book) => (
+        <div key={book.id}>
+          <h2>{book.title}</h2>
+          <p>{book.body}</p>
         </div>
       ))}
     </div>
   );
 }
+
+export default Books;
